@@ -12,3 +12,4 @@
 
 ## ブラウザーで表示
  - `/dist/index.html`をクローム開く
+ - 猫たちは`exports.shi`や`exports.kyan`でアクセスできます
