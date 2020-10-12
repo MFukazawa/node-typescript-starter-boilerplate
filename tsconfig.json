@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "CommonJS",
     "esModuleInterop": true,
     "target": "es6",
     "noImplicitAny": true,
@@ -23,7 +23,7 @@
     // "strictBindCallApply": true,
     "lib": [
       "es6"
-    ]
+    ],
   },
   "include": [
     "src/**/*"

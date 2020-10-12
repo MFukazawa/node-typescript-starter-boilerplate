@@ -90,3 +90,5 @@ export const owner: CatOwner = new CatOwner();
 // 猫２匹 ・1. しーちゃん、  2.キャンちゃん
 export const shi: ICat = new Cat('Shi', 0, 1);
 export const kyan: ICat = new Cat('Kyan', 0, 2);
+
+export {};
