@@ -3,7 +3,7 @@ const MINIMUM_HUNGER = 0;
 // CatOwner
 export class CatOwner {
   public checkHunger(cat: ICat) {
-    // HPを確認する
+    // HPを確認する 
     cat.meow();
   }
 
