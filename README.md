@@ -11,6 +11,6 @@
  - `npm test` script with full Jest + TS support
 
 ## ブラウザーで表示
- - `/dist/index.html`をクローム開く
+ - `/app/index.html`をクローム開く
  - 猫たちは`exports.shi`や`exports.kyan`でアクセスできます
  - 持ち主は`exports.owner`からアクセスしてください

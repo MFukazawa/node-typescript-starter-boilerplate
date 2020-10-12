@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>くらしのマーケット開発テスト</title>
+  </head>
+  <body>
+    <header class="header container">
+      <h1 class="header__title">しーちゃんとキャンちゃん</h1>
+      <p class="header__subtext">深澤マイカ進吉</p>
+    </header>
+
+    <main class="main container">
+      <h2>開発テスト</h2>
+      <p>
+        TypeScriptで、以下の仕様を満たすものを、ユニットテスト(必須テストケースも以下に記載)を含めて実装してください。
+      </p>
+      <h3>仕様</h3>
+      <h4>登場人物：CatOwner、猫たち</h4>
+      <ul>
+        <li>猫たちは「しーちゃん」「キャンちゃん」の2匹が存在します</li>
+      </ul>
+      <h4>
+        猫たちは以下の4つの行動をします
+      </h4>
+      <ul>
+        <li>お腹が減っているかどうかを教える</li>
+        <li>えさを食べる（"おやつ" or "シーチキン"）</li>
+        <li>遊ぶ</li>
+        <li>暴れる</li>
+      </ul>
+      <h4>
+        CatOwnerは、以下の行動をします
+      </h4>
+      <ul>
+        <li>猫が空腹かを確かめる（CatOwnerは猫の言葉がわかります）</li>
+        <li>猫に餌をあげる（"おやつ" or "シーチキン"）</li>
+      </ul>
+      <h4>
+        空腹かどうかの定義：
+      </h4>
+      <ul>
+        <li>猫にはHungerPointがあり、デフォルトは0</li>
+        <li>猫は遊ぶ度に `10 * 猫ハラヘリ係数` (※1)ずつHungerPointが増えていく</li>
+        <li>HungerPointが60以上で、猫はハラヘリになる</li>
+        <li>HungerPointが100以上だと、何をしようとしても暴れる（餌もあげられない）</li>
+        <li>HungerPointは"おやつ"をあげると40減る、"シーチキン"をあげると0になる</li>
+        <li>※1 しーちゃんは1, キャンちゃんは2</li>
+      </ul>
+      <h4>必須テストケース</h4>
+      <ul>
+        <li>【条件】しーちゃん、5回遊んだ後に空腹確認→【expected】「まだ大丈夫」</li>
+        <li>【条件】しーちゃん、9回遊んだ後に空腹確認→【expected】「ハラヘリ」</li>
+        <li>【条件】しーちゃん、10回遊んだ後に空腹確認→【expected】暴れる</li>
+        <li>【条件】キャンちゃん、2回遊んだ後に空腹確認→【expected】「まだ大丈夫」</li>
+        <li>【条件】キャンちゃん、3回遊んだ後に空腹確認→【expected】「ハラヘリ」</li>
+        <li>【条件】キャンちゃん、5回遊んだ後に空腹確認→【expected】暴れる</li>
+      </ul>
+    </main>
+    <footer class="footer container">
+      😸よろしくお願い致します！😸
+    </footer>
+    <script>
+      var exports = {};
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+
+<style>
+  html {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo,
+      sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    /* via loading.io */
+    background-image: url('assets/paw-1s-1084px.png');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    position: relative;
+    max-width: 100%;
+    padding: 2rem;
+    background-color: white;
+    border: 3px solid #457290;
+    border-radius: 5px;
+  }
+
+  @media screen and (min-width: 640px) {
+    .container {
+      max-width: 640px;
+      margin: 0 3rem;
+      padding: 3rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li:before {
+    position: absolute;
+    left: 50px;
+    line-height: 21px;
+    content: '🐟';
+  }
+
+  .header {
+    font-family: Osaka, Meiryo;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .main {
+    margin-top: 3rem;
+  }
+
+  .footer {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+</style>
